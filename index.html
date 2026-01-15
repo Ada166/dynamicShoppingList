@@ -23,7 +23,7 @@
     <form>
       <label for="item">Enter a new item:</label>
       <input type="text" name="item" id="item">
-      <button>Add item</button>
+      <button id="btn">Add item</button>
     </form>
 
     <ul>
@@ -31,7 +31,16 @@
     </ul>
 
     <script>
+        let list = document.querySelector('ul');
+        let item = document.getElementById('item');
+        let button = document.getElementById('btn');
 
+        function addItem(event) {
+            event.preventDefault();
+        let itemList = document.createElement('li');
+            itemList.textContent = item.value;
+
+        }
     </script>
   </body>
 </html>
