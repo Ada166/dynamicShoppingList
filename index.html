@@ -37,10 +37,24 @@
 
         function addItem(event) {
             event.preventDefault();
+        const span = document.createElement('span');
+        const deleteBtn = document.createElement('button');
         let itemList = document.createElement('li');
             itemList.textContent = item.value;
+          list.appendChild(itemList);
+          item.value = '';
+          span.textContent = item.value;
+          deleteBtn.textContent = 'Delete';
+          itemList.appendChild(span);
+          itemList.appendChild(deleteBtn);
+          deleteBtn.addEventListener('click', function() {
+            list.removeChild(itemList);
+          })
 
         }
+
+
+        button.addEventListener('click', addItem);
     </script>
   </body>
 </html>
